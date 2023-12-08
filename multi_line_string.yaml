@@ -1,0 +1,26 @@
+# multiline strings = 
+
+# string 1 baris dengan special karakter
+multilineString : "String \n"
+
+# string menggunakan | untuk multiline (masing-masing baris akan dianggap sebagai string)
+#  string menggunakan tanda > maka akan mengabaikan spasi atau tab dan menjadi 1 baris
+multiLineStrings: |
+  this is a multiline string 
+  and this is the next line
+  next line
+
+# contoh pengunaan multiline di kubernetes
+command : 
+  - sh
+  - -c 
+  - |
+    # !/user/bin/env bash
+    http(){
+      local path"${1}"
+      set -- -XGET -s --fail
+      # some more stuff here
+      curl -k "$@" "https://localhost:9200${path}"
+    }
+    http "/app/kibana"
+

@@ -1,0 +1,16 @@
+# placeholder, salah satu kasus, pengunaannya membantu misalnya dan beginilah tampilan pada dasarnya daripada langsung didalam file yaml dan sintak untuk menggunakan placeholder dengan cara menggunakan tanda kurung kurawa dual
+
+# daripada menulis string lebih baik menggunakna placeholder sebagai contoh intruksinya
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name:{{ .Values.services.name }}
+spec:
+  selector:
+    app:{{ .Values.services.app }}
+  ports:
+    - protocol: TCP
+        port:{{ .Values.services.port }}
+        targetPort:{{ .Values.services.targetport }}

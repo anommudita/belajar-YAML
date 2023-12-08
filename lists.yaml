@@ -1,0 +1,24 @@
+# list = untuk menyimpan beberapa data yang didalamny ada beberapa data yang berbeda
+# menggunakan tanda - 
+
+
+microservice:
+  - app : user-authentication
+    port : 8080
+    #  cara ekspersi dengan cepat
+    version : [1.2, 1.9, 2.0]
+    depolyed : yes
+
+    #  ini merupakan lebih dari list 
+  - app : shopping-cart
+    port : 9002
+    version : 
+    - 1.9
+    - 1.8
+    depolyed : yes
+
+    
+#  define object 
+microservices:
+  - user-authentication
+  - shopping-cart

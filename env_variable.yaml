@@ -1,0 +1,11 @@
+
+
+# readiness probe
+
+#  mengambil data dari environtment variable
+#  menggunakan tanda $ untuk mengambil data dari environtment variable
+command :
+  - /bin/sh
+  - >-
+    mysql -h 127.0.0.1 -u root -p$MYSQL_ROOT_PASSWORD -e 'SELECT 1'
+

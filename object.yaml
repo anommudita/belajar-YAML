@@ -1,0 +1,7 @@
+# object = untuk menyimpan beberapa data yang akan digunakan secara bersamaan
+
+
+microservice:
+  app : user-authentication
+  port : 8080
+  version : 1.0.0

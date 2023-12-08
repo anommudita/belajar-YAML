@@ -1,0 +1,5 @@
+# ketika ingin menggunakan stting harus mengunakan specsial karakter seperti "user-authentication \n"
+
+app : user-authentication
+port : 8080
+version : 1.0.0
